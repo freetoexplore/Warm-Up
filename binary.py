@@ -1,3 +1,5 @@
+# This script aims to deploy the binary code for numeric input 0-3
+
 binary_dict = {0: '000', 1: '001', 2: '010', 3: '011'}
 b_win = []
 window = '000'
