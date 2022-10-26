@@ -2,6 +2,7 @@
 
 df = []
 
+# pairs prepared to hash
 n_pair = int(input('N: '))
 for pair in range(0, n_pair):
     kv = str(input('Pair: '))
@@ -17,10 +18,12 @@ now_k = []
 result_dict = {}
 for pair in df:
     
+    # append values
     if pair[0] not in now_k:
         now_k.append(pair[0])
         result_dict[pair[0]] = pair[-1]
-        
+   
+# aggretate values    
     else:
         result_dict[pair[0]] = result_dict[pair[0]]+pair[-1]
 
