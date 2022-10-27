@@ -14,7 +14,7 @@ It is genuinely comprehensive and practical key for the wider public to open the
 which keeps simplicity, essence, and elegance (sophisticated: precise, cost-saving: margins/granularity, humanity: user-friendly) in mind.
 
 I am always shocked on the gap of how I have believed human are capable of doing and how things/lives are limited of, like any language itself. 
-It is the longing for a lasting and stable foundation that leads me to dictionaries and manuals. By understanding the base rules, it creates solid and resilient commitment and ultimately save more.
+It is the longing for a lasting and stable foundation that leads me to dictionaries and manuals. By understanding the base rules, it creates solid and resilient commitment and ultimately saves more.
 
 当我在尝试为这个长期的，注定会诞生的产品构想时，对选词我尤为注意。我想这部分不仅是一个基础概念，它像一座桥，但又不完全是桥本身；像一座建筑，但没那么宏伟；像生命初始的状态，但并不意味溯源。
 
