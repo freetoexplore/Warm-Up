@@ -11,10 +11,12 @@ In this repo, you'll find some warm up practices. Hope you will enjoy the cracki
 After working for a while, I've been consistently looking for what remains unchanged in daily trivial and the derived magnificent goals. 
 One thing comes up in my mind is the principles, of which lead people behave with righteousness and rationales.
 It is genuinely comprehensive and practical key for the wider public to open the door of modern wisdom, 
-which keeps simplicity, essence, and elegance (sophisticated: precise, cost-saving: margins/granularity, humanity: user-friendly) in mind.
+which keeps simplicity, essence, and agile (elegance: precise, cost-saving: margins/granularity, humanity: user-friendly) in mind.
 
 I am always shocked on the gap of how I have believed human are capable of doing and how things/lives are limited of, like any language itself. 
 It is the longing for a lasting and stable foundation that leads me to dictionaries and manuals. By understanding the base rules, it creates solid and resilient commitment and ultimately saves more.
+
+
 
 它像一座桥，可不是桥本身；像一座建筑，但更灵活；像生命初始的状态，却并不意味着溯源。
 
