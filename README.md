@@ -1,6 +1,6 @@
 - 👋 Hi there, I’m @freetoexplore, an post-business consultant and pre-technical engineer.
 - 👀 I’m interested in data exploration, automation, machine learning and real-time visualization.
-- 🌱 I’m currently learning surfing online scientifically : )
+- 🌱 I’m currently saving money to get VPN certificates.
 - 💞️ I’m looking forward to design an interactive and user-friendly product. 
 - 📫 How to reach me ... Gently star this repo and see if virtuality creates better self-perception.
 
