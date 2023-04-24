@@ -32,7 +32,7 @@ else:
         if len(factors) == 1:
             primes_factors.append(num) 
             
-    print(primes_factors)    
+    # print(primes_factors)    
     final_factors = []
     
     for factor in primes_factors:
