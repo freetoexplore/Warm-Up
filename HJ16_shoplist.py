@@ -1,88 +1,87 @@
-input_str = str(input('Input charge and amount:'))
-total_charge = int(input_str.split(' ')[0])
-total_amount = int(input_str.split(' ')[1])
+import math
+input0 = '1000 5'# '50 5'# 
+input1 = '800 2 5' # '20 3 5'# 
+input2= '400 5 1' # '20 3 5'# 
+input3 = '300 5 1' # '10 3 0'# 
+input4 = '400 3 0' # '10 2 0'# 
+input5 = '500 2 0' # '10 1 0'# 
 
-prod_prc = []
-prod_wgt = []
-prod_pid = []
-load_prod = []
-idx = 1
+def extract_num(input_str, place):
+    return int(input_str.split(' ')[place])
 
-for terms in range(total_amount):
-    item_info = input('Input items:') +' '+ str(idx)
-    load_prod.append(item_info)
+prices = [extract_num(input1, 0), extract_num(input2, 0), extract_num(input3, 0), extract_num(input4, 0), extract_num(input5, 0)]
+values = [extract_num(input1, 1), extract_num(input2, 1), extract_num(input3, 1), extract_num(input4, 1), extract_num(input5, 1)]
+main_id = [extract_num(input1, 2), extract_num(input2, 2), extract_num(input3, 2), extract_num(input4, 2), extract_num(input5, 2)]
+main_id_clean = []
 
-    prod_prc.append(int(item_info.split(' ')[0]))
-    prod_wgt.append(int(item_info.split(' ')[1]))
-    prod_pid.append(int(item_info.split(' ')[2]))
+### start to script
+
+for i in main_id: 
+    if i != 0:
+        main_id_clean.append(i)
+    else:
+        main_id_clean.append(math.nan)
+        
+print(main_id_clean)
+
+budget = int(input0.split(' ')[0])
+n_constraint = int(input0.split(' ')[1])
+scores_list = []
+
+
+round_turns = 0
+max_turns = n_constraint
+step_range_init = [i for i in range(n_constraint)]
+
+while round_turns < max_turns:
+    scores = 0
+    print('round {0}'.format(round_turns))
+    step_range = step_range_init[round_turns:] + step_range_init[:round_turns]
+    print(step_range)
     
-    idx += 1
+    step_list = []
     
-print(prod_prc)
-
-# compound product price with its main part
-amount = 0
-satisfaction_score = []
-
-append_flag = 'N'
-score = 0
-last_turn = 0
-
-for idx in range(len(prod_pid)):
-    
-    idx += last_turn
-    last_turn = 0
-    
-    while idx < len(prod_pid) - 1 or append_flag == 'Y':
-        print('flag 1')
-        if amount <= total_amount or total_charge >= 0:
-                    satisfaction_score.append(score)
-                    append_flag = 'N'
-                    
+    for step in step_range:
+        step_list.append(step)
+        
+    # main part    
+        if main_id[step] == 0:
+            p = prices[step]
+            v = values[step]
+            budget -= p
+            n_constraint -= 1
+            scores += p*v
+            
+            if budget >= 0 and n_constraint >= 0:
+                scores_list.append(scores)
+            print('main   step:', step, 'round:',round_turns,'score:',scores,'budget', budget, 'amount:', n_constraint, scores_list)
+            
+    # appendix part        
         else:
-            append_flag = 'N'
-            break
+            p_appendix = prices[step]
+            v_appendix = values[step]
             
-        for idx in range(len(prod_pid)):
-            p = prod_prc[idx]
+            budget -= p_appendix
+            n_constraint -= 1
+            scores += p_appendix*v_appendix
             
-        # when first item is main part
-            if prod_pid[idx] == 0:
-                v = prod_wgt[idx]
+            step_main = main_id[step] - 1
+            p_main = prices[step_main]
+            v_main = values[step_main]
+            
+            if step_main not in step_list:
+                budget -= p_main
+                n_constraint -= 1
+                scores += p_main*v_main
+            
+            if budget >= 0 and n_constraint >= 0:
+                scores_list.append(scores)
                 
-                amount += 1
-                total_charge -= p
-                score += p*v
+            print('append step', step, 'main step', step_main, 'round', round_turns,'score',scores, 'budget', budget, 'amount:', n_constraint, scores_list, 'step list:')
                 
-                if amount <= total_amount and total_charge >= 0:
-                    satisfaction_score.append(score)
-                else:
-                    break
-                        
-        # when first item is appendix part
-            else:
-                if prod_pid[idx] != 0:
-                    append_flag = 'Y'
-                    last_turn = 1
-                    
-            # score & charge on appendix part
-                v_append = prod_wgt[idx]
-                
-                amount += 1
-                total_charge -= p
-                score += p*v_append
-                
-            # score & charge on its main part
-                id_main = prod_pid[idx]
-                p_main = prod_prc[id_main - 1]
-                v_main = prod_wgt[id_main - 1]
-                
-                amount += 1
-                total_charge -= p
-                score += p_main*v_main
-                print('flag 2')
-                
-        print('iteration score:', satisfaction_score, idx, total_amount, total_charge, append_flag)
+    print('round', round_turns, 'scores:', scores_list)        
+    round_turns += 1
+    n_constraint = int(input0.split(' ')[1])
+    budget = int(input0.split(' ')[0])
     
-result = max(satisfaction_score)
-print('best score', result)
+print(max(scores_list))
