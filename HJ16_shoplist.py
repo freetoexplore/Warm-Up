@@ -1,4 +1,4 @@
-### NOT FINAL VERSION !!! ###
+########## In Process ... ##########
 import math
 input0 = str(input())
 budget = int(input0.split(' ')[0])
