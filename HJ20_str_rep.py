@@ -1,5 +1,5 @@
-import re
 import sys
+import re
 
 df = sys.stdin.read().strip()
 input_strs = [i for i in df.split("\n")]
