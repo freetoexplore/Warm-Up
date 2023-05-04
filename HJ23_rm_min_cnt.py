@@ -12,10 +12,7 @@ min_cnt = min(dict_l.values())
 result = ''
 for l in input_str:
     key = l
-    # for key in dict_l.keys():
     if int(dict_l[key]) != min_cnt:
-        # for n in range(dict_l[key]):
         result = result + str(key)
-        # print('re', result)
-                
+        
 print(result)
