@@ -1,5 +1,5 @@
 # for loop save letters in string by list. 
-# split() truncate by unit in 'word'
+# split() truncate by unit in 'word' rather letters
 
 input_str = str(input())
 cnt = 0
