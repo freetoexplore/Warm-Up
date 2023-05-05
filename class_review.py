@@ -1,11 +1,12 @@
-# this is an example from browser
+# this is an example from browser to resolve quadratic equation
 class Equation():
 
     # global parameters
-    a = int(input("Input 'a' for function f(x) = aX^2 + bX + c:"))
-    b = int(input("Input 'b' for function f(x) = aX^2 + bX + c:"))
-    c = int(input("Input 'c' for function f(x) = aX^2 + bX + c:"))
-    g = 0 # 求根公式定值，不需要输入覆盖
+    def __init__(_):
+        _.a = int(input("Input 'a' for function f(x) = aX^2 + bX + c:")) # 1
+        _.b = int(input("Input 'b' for function f(x) = aX^2 + bX + c:")) # -5
+        _.c = int(input("Input 'c' for function f(x) = aX^2 + bX + c:")) # 6
+        _.g = 0 # 求根公式定值，不需要输入覆盖
     
     
     def Discriminants(_):
@@ -13,7 +14,7 @@ class Equation():
     # you may think it defined as a linkage from global parameter and called object
 
         _.g = _.b**2 - 4*_.a*_.c
-        print('求和公式 =', _.b**2 - 4*_.a*_.c)
+        print('求和公式(roots) =', _.b**2 - 4*_.a*_.c)
         
     # Only global parameters are retrievable. 
     # Don't trespass by tele-call functions/objects b/w defined functions. 
@@ -33,10 +34,10 @@ class Equation():
             
             
 # call functions
-def func_call():
+def main():
     call_func = Equation()
-    call_func.Discriminants() # remember to call 求根公式 to activate function _.g
+    call_func.Discriminants() # remember to call 求根公式(roots) to activate function _.g
     call_func.Root1()
     call_func.Root2()
 
-func_call()
+main()
