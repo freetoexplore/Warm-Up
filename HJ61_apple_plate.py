@@ -1,5 +1,5 @@
-m_apple = 2
-n_plate = 5
+m_apple = 7
+n_plate = 3
 
 turns = 1
 multiplier = m_apple
@@ -27,7 +27,7 @@ while turns > 1:
         combo_set = []
             
         for start_n in range(ini_start, m):
-            print('# start_n', start_n)
+            # print('# start_n', start_n)
             if len(combo_set) < n - 1:
                 # print('consider item:', start_n)
                 combo_set.append(start_n)
@@ -39,7 +39,7 @@ while turns > 1:
                 if dedup_remainder >= 0:
                     combo_set.append(dedup_remainder)
                 
-        print(combo_set)            
+        # print(combo_set)            
         if combo_set not in all_combos and len(combo_set) == n_plate:
             all_combos.append(combo_set)
         
@@ -72,4 +72,4 @@ while turns > 1:
                         
     turns -= 1
     
-print('combos', all_combos_dedup)
+print('combos', len(all_combos_dedup))
