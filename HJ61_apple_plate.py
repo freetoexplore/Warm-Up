@@ -5,14 +5,13 @@ turns = 1
 multiplier = m_apple
 plates = n_plate
 
-# ??? remove variable: turns by other length variable
 for i1 in range(m_apple):
     if plates > 0:
         turns *= multiplier
         multiplier -= 1
         plates -= 1
     
-# print(turns)
+# print('turns to search through combinations', turns)
 
 all_combos = []
 while turns > 1:
