@@ -37,7 +37,7 @@ It is the longing for a lasting and stable foundation that leads me to dictionar
 学习电脑科学常令我感叹文字的有限，而它们仍尝试捕捉着生命中重要的时刻。
 为了使这些内容变得有益，我会慢慢累积金字塔石块。
 
-它像一座桥，并不是桥本身；像一座建筑，可更灵活；像生命初始的状态，但并不意味着溯源。
+它像一座桥，并不是桥本身；像一座建筑，可更灵活；像生命初始的状态，但更意味着溯源。
 
 <!---
 freetoexplore/freetoexplore is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
