@@ -19,7 +19,7 @@ I am always shocked on the gap of how I have believed human are capable of doing
 It is the longing for a lasting and stable foundation that leads me to dictionaries and manuals. By understanding the base rules, it creates solid and resilient commitment and ultimately saves more.
 
 - 欢迎您来到我的Github网页！这是多令人兴奋的相遇，请允许我介绍一下自己。
-- 作为前技术咨询师和预备工程师，我对数据开发、自动化、AI模型与实时可视化有极大兴趣。
+- 作为前技术咨询师和预备工程师，我对数据开发、自动化、AI模型与实时可视化有极大热忱。
 - 当然，目前为止我仍希望学会科学上网并默默耕耘着自己的财富。
 - 如果有机会形成一部有趣的基于网页的游戏产品就再好不过了！
 - 不用我提您一定知道通过关注、讨论都可以和我互动联系。
