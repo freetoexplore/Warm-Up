@@ -18,7 +18,6 @@ for i in apart:
     if i == 1:
         apart[apart.index(1)] = apart[apart.index(1) + 1]
     ix += 1
-print(apart)
         
 for i in apart:
     result+=i
